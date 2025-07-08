@@ -136,7 +136,7 @@ btnCheck.addEventListener("click", function () {
     // If player loses
     if (currentScore <= 0) {
       message.textContent = "👎 You Lost! Play Again 👇";
-
+      hintEl.textContent = `The band is "${bandName}"`;
       document.body.style.backgroundImage =
         "linear-gradient(to top left,rgb(105, 12, 12) 0%,rgb(227, 76, 76)  100%)";
       return;
