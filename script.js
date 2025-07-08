@@ -94,12 +94,12 @@ const scoreEl = document.querySelector(".score-value");
 const btnCheck = document.querySelector(".btn--check");
 const btnNew = document.querySelector(".btn--new");
 
-let currentScore = 10;
+let currentScore = 3;
 let bandName = bands[Math.floor(Math.random() * bands.length)];
 
 // Starting Conditions
 const init = function () {
-  currentScore = 10;
+  currentScore = 3;
   scoreEl.textContent = currentScore;
   bandName = bands[Math.floor(Math.random() * bands.length)];
   message.textContent = "Start guessing...";
@@ -136,6 +136,7 @@ btnCheck.addEventListener("click", function () {
     // If player loses
     if (currentScore <= 0) {
       message.textContent = "👎 You Lost! Play Again 👇";
+
       document.body.style.backgroundImage =
         "linear-gradient(to top left,rgb(105, 12, 12) 0%,rgb(227, 76, 76)  100%)";
       return;
